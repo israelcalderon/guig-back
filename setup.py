@@ -14,4 +14,5 @@ setup(name='Guig',
         'flask-restful',
         'Flask-SQLAlchemy',
         'python-dotenv',
-        'requests'])
+        'requests',
+        'Flask-CORS'])

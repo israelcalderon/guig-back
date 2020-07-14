@@ -49,6 +49,7 @@ class Commits(Resource):
             result_commits.append({
                 'commit': commit.hexsha,
                 'author': commit.author.name,
+                'message': commit.message,
                 'email': commit.author.email,
                 'files': len(commit.stats.files),
                 'datetime': commit.committed_datetime.isoformat()

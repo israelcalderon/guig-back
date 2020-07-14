@@ -2,6 +2,7 @@ import os
 import dotenv
 from flask import Flask
 from flask_restful import Api
+from flask_cors import CORS
 
 from db import db
 from resources import branch
@@ -46,7 +47,7 @@ api.add_resource(pull_request.ClosePullRequest,
 
 if __name__ == '__main__':
     db.init_app(app)
-
+    CORS(app)
     with app.app_context():
         db.create_all()
 
